@@ -1,7 +1,9 @@
 # ChallengeASAAP
 
-Task 1:BuildScript
+Task 1:
+BuildScript
 I have created a simple jenkins parallel pipeline to buil;d the servers in integration mode. We can add functionalities such as whenever a new git commit is pushed into repo, continuos build using poll SCM, to build after running a different project first etc
+
 Task2:
 To deploy multiple scripts to multiple servers I have created an ansible playbook and host inventory file. In the ansible-playbook you have to install the go Binary depending on your machine. You don't require to install python binary for vagrant machines.
 You can just add the server ID to inventory file to which you want to deploy your scripts
