@@ -1,0 +1,8 @@
+node {
+   git "git@github.com..."
+   parallel (
+     server1: { sh " python install; sleep 20s; ./script/server.py" },
+     server2: { sh "go install; sleep 40s; ./script/server.py" }
+   )
+
+}

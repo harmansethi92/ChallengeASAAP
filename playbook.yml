@@ -1,0 +1,21 @@
+- hosts : web
+  sudo : true 
+  user : root
+  tasks :
+  - name: Creates directory
+    file: path=//ansible/playbooks/  state=directory  mode=0775
+  - name : Copy script
+    copy : src=/Users/administrator/Desktop/server.py dest=/ansible/playbooks/server.py mode=755
+  - name : Execute script
+    command : /usr/bin/python /ansible/playbooks/server.py
+
+- hosts : web1
+  sudo : true
+  user : root
+  tasks :
+  - name : Install go on your remote machine
+#    command : Install the go module depending on your machine configs just like python in the above case
+  - name : Copy script
+    copy : src=/Users/administrator/Desktop/server.go dest=/ansible/playbooks/server.go mode=755
+  - name : Execute script
+    command : /usr/bin/go /ansible/playbooks/server.go
